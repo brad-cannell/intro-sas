@@ -10,25 +10,25 @@ All the SAS code used in this course is available by clicking on the “code” 
 
 Getting started - No example code.
 
-[Descriptive Analysis I](intro_sas/Code/Lab/Descriptive Analysis I Key.sas)
+[Descriptive Analysis I](/Code/Lab/Descriptive%20Analysis%20I%20Key.sas)
 
-[Descriptive Analysis II](intro/Code/Lab/Descriptive Analysis II Key.sas)
+[Descriptive Analysis II](/Code/Lab/Descriptive%20Analysis%20II%20Key.sas)
 
-[Creating Libraries and Importing Data](intro/Code/Lab/Creating Libraries and Importing Data Key.sas)
+[Creating Libraries and Importing Data](/Code/Lab/Creating%20Libraries%20and%20Importing%20Data%20Key.sas)
 
-[Enhancing the Readability of SAS Data Sets](intro/Code/Lab/Enhancing the Readability Key.sas)
+[Enhancing the Readability of SAS Data Sets](/Code/Lab/Enhancing%20the%20Readability%20Key.sas)
 
-[Conditional Processing and DO Groups](intro/Code/Lab/Conditional Processing Key.sas)
+[Conditional Processing and DO Groups](/Code/Lab/Conditional%20Processing%20Key.sas)
 
-[Iterative Processing and Skip Patterns](intro/Code/Lab/Iterative Processing and Arrays Key.sas)
+[Iterative Processing and Skip Patterns](/Code/Lab/Iterative%20Processing%20and%20Arrays%20Key.sas)
 
-[Working with Multiple SAS Data Sets and Reshaping / Restructuring Data Sets](intro/Code/Lab/Working with Multiple SAS Data Sets Key.sas)
+[Working with Multiple SAS Data Sets and Reshaping / Restructuring Data Sets](/Code/Lab/Working%20with%20Multiple%20SAS%20Data%20Sets%20Key.sas)
 
-[By Group Processing](intro/Code/Lab/)
+[By Group Processing](/Code/Lab/)
 
-[Effectively Presenting Your Results](intro/Code/Lab/Effectively Presenting Results Key.sas)
+[Effectively Presenting Your Results](/Code/Lab/Effectively%20Presenting%20Results%20Key.sas)
 
-[Analyzing Complex Survey Data](intro/Code/Lab/Analyzing Complex Survey Data Key.sas)
+[Analyzing Complex Survey Data](/Code/Lab/Analyzing%20Complex%20Survey%20Data%20Key.sas)
 
 # Instructional Videos
 
