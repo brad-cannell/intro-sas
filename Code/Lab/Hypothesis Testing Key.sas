@@ -2,13 +2,7 @@
 Lab Assignment 
 Module 10: Hypothesis Testing
 
-In this week’s lab we will practice using SAS to calculate confidence intervals around point 
-estimates of means and proportions. We will also use SAS to conduct hypothesis tests for 
-differences in means and frequency distributions. 
-
-This code is posted for your benefit; however, I highly recommend that you practice typing your
-own SAS programs as well. With the SAS programming language, as with all new languages, immersion 
-seems to be the best way to learn.
+This lab is not longer part of the course.
 
 *************************************************************************************************/
 
