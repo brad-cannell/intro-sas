@@ -10,7 +10,7 @@ All the SAS code used in this course is available by clicking on the “code” 
 
 Getting started - No example code.
 
-[Descriptive Analysis I](/intro_sas/Code/Lab/Descriptive Analysis I Key.sas)
+[Descriptive Analysis I](intro_sas/Code/Lab/Descriptive Analysis I Key.sas)
 
 [Descriptive Analysis II](intro/Code/Lab/Descriptive Analysis II Key.sas)
 
