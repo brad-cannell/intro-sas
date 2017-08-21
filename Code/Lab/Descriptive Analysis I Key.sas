@@ -1,24 +1,22 @@
-/*************************************************************************************************
-Lab Assignemnt
-Module 2: Descriptive Analysis I
+* ============================================================================;
+* Lab Assignemnt
+* Descriptive Analysis I
 
-	*Create a list report
-	*Create a frequency report
-	*Calculate measures of central tendency
-	*Calculate measures of dispersion
-	*Graphically describe data
+	* Create a list report
+	* Create a frequency report
+	* Calculate measures of central tendency
+	* Calculate measures of dispersion
+	* Graphically describe data
 
-This code is posted for your benefit; however, I highly recommend that you practice typing your
-own SAS programs as well. With the SAS programming language, as with all new languages, immersion 
-seems to be the best way to learn.
+* ============================================================================;
 
-*************************************************************************************************/
-/*
-Example 1. Descriptive Analysis Of 2010 Census Data
-The following data comes from the United States Census Bureau website (http://factfinder2.census.gov).  
-Please read the data into SAS using a DATALINES statement in a DATA step, and create a temporary 
-SAS data set called census.
-*/
+* Example 1. Descriptive Analysis Of 2010 Census Data
+* The following data comes from the United States Census Bureau website 
+* (http://factfinder2.census.gov).  
+* Please read the data into SAS using a DATALINES statement in a DATA step, 
+* and create a temporary 
+* SAS data set called census;
+
 data census;
 	input state $ region $ pop pop65 medage;
 	datalines;
@@ -75,40 +73,39 @@ data census;
 	;	
 run;
 
-/*
-Task 1. Create a list report containing all the variables in the data set census.
-*/
+* Task 1. Create a list report containing all the variables in the data set 
+* census;
+
 proc print data = census;
 run;
 
-/*
-Task 2. Create another list report using the census data set. This time omit the obs column and 
-only display the state abbreviation and total population variables.
-*/
+* Task 2. Create another list report using the census data set. This time omit 
+* the obs column and only display the state abbreviation and total population 
+* variables;
+
 proc print data = census noobs;
 	var state pop;
 run;
 
-/*
-Task 3. Create a frequency report for the variable region in the census data set.
-*/
+* Task 3. Create a frequency report for the variable region in the census data 
+* set;
+
 proc freq data = census;
 	tables region;
 run;
 
-/*
-Task 4. Create a bar graph depicting the number of states in each region.
-*/
+* Task 4. Create a bar graph depicting the number of states in each region;
+
 proc gchart data = census;
 	hbar region;
 run;
 
-/*
-Example 2. Using The MEANS Procedure
-Porcellini et al. studied 13 HIV-positive patients who were treated with highly active 
-antiretroviral therapy (HAART) for at least 6 months. The CD4 T cell counts at baseline for the 
-13 participants are listed below (Daniel, 2005).
-*/
+* Example 2. Using The MEANS Procedure
+* Porcellini et al. studied 13 HIV-positive patients who were treated with 
+* highly active antiretroviral therapy (HAART) for at least 6 months. The CD4 
+* T cell counts at baseline for the 13 participants are listed below 
+* (Daniel, 2005);
+
 data porcellini;
 	input cd4;
 	datalines;
@@ -128,21 +125,20 @@ data porcellini;
 	;
 run;
 
-/*
-Task 2. Request the MEAN, MEDIAN, MODE, Standard Deviation, MIN, and MAX.
-*/
+* Task 2. Request the MEAN, MEDIAN, MODE, Standard Deviation, MIN, and MAX;
+
 proc means data=porcellini mean median mode std min max;
 	var cd4;
 run;
 
-/*
-Example 3. Using The MEANS Procedure And SGPLOT Procedure
-Thilothammal et al. designed a study to determine the efficacy of BCG (bacillus Calmette-
-Guérin) vaccine in preventing tuberculosis meningitis. Among the data collected on each subject
-was a measure of nutritional status (actual weight expressed as a percentage of expected weight
-for actual height). The nutritional status values of the 107 cases studied are listed below (Daniel,
-2005).
-*/
+* Example 3. Using The MEANS Procedure And SGPLOT Procedure
+* Thilothammal et al. designed a study to determine the efficacy of BCG 
+* (bacillus Calmette-Guérin) vaccine in preventing tuberculosis meningitis. 
+* Among the data collected on each subject was a measure of nutritional status 
+* (actual weight expressed as a percentage of expected weight for actual 
+* height). The nutritional status values of the 107 cases studied are listed 
+* below (Daniel,2005);
+
 data thilothmmal;
 	input status @@;
 	datalines;
@@ -155,16 +151,14 @@ data thilothmmal;
 	;
 run;
 
-/*
-Task 2. Request the MEAN, MEDIAN, MODE, Standard Deviation, MIN, and MAX.
-*/
+* Task 2. Request the MEAN, MEDIAN, MODE, Standard Deviation, MIN, and MAX;
+
 proc means data=thilothmmal mean median mode std min max;
 	var status;
 run;
 
-/*
-Task 3. Create a histogram of these values.
-*/
+* Task 3. Create a histogram of these values;
+
 proc sgplot data=thilothmmal;
 	histogram status;
 	density status;
@@ -174,14 +168,15 @@ proc univariate data=thilothmmal plot;
 	var status;
 run;
 
-/*
-Example 4. Analyze Class Survey Data
-The data below was collected from students in a class. It contains eight variables: id, height, 
-weight, male (coded as 1 if the student is male and 0 if the student is female), bach5300 (coded 
-as 1 if the student took BACH5300 and 0 if the student did not take BACH5300), bios5300 
-(coded as 1 if the student took BIOS5300 and 0 if the student did not take BIOS5300), epid5300 
-(coded as 1 if the student took EPID5300 and 0 if the student did not take EPID5300), and gpa.
-*/
+* Example 4. Analyze Class Survey Data
+* The data below was collected from students in a class. It contains eight 
+* variables: id, height, weight, male (coded as 1 if the student is male and 0 
+* if the student is female), bach5300 (coded as 1 if the student took BACH5300 
+* and 0 if the student did not take BACH5300), bios5300 (coded as 1 if the 
+* student took BIOS5300 and 0 if the student did not take BIOS5300), epid5300 
+* (coded as 1 if the student took EPID5300 and 0 if the student did not take 
+* EPID5300), and gpa;
+
 data classsurv;
 	input id height weight male bach5300 bios5300 epid5300 gpa;
 	datalines;
@@ -208,15 +203,15 @@ data classsurv;
 	;
 run;
 
-/*
-Task 2. Request the MEAN, MEDIAN, MODE, Standard Deviation, MIN, and MAX for all variables in the data set.
-*/
+* Task 2. Request the MEAN, MEDIAN, MODE, Standard Deviation, MIN, and MAX for 
+* all variables in the data set;
+
 proc means data = classsurv n mean median mode std min max;
 run;
 
-/*
-Task 3. Create a boxplot of the variable height. Make sure to label any outliers with the variable id.
-*/
+* Task 3. Create a boxplot of the variable height. Make sure to label any 
+* outliers with the variable id;
+
 proc sgplot data = classsurv;
 	vbox height / datalabel = id;
 run;
