@@ -41,3 +41,5 @@ Here are links to some of the data sets used in the code above.
 * [BRFSS](https://www.cdc.gov/brfss/annual_data/annual_data.htm)
 
 * [NHANES](https://wwwn.cdc.gov/nchs/nhanes/)
+
+* [WHAS500.txt](https://www.dropbox.com/s/c14gqhjbny0mlra/whas500.txt?dl=0)
