@@ -40,11 +40,13 @@ Here are links to some of the data sets used in the code above.
 
 * [BRFSS](https://www.cdc.gov/brfss/annual_data/annual_data.htm)
 
+* [Chocolate Studies](https://www.dropbox.com/s/u5y181fx5ibdbra/Chocolate%20Studies.zip?dl=0)
+
+* [Diabetes Datasets](https://www.dropbox.com/s/xmcwcsxthfixlmb/Diabetes%20Datasets.zip?dl=0)
+
 * [NHANES](https://wwwn.cdc.gov/nchs/nhanes/)
 
 * [WHAS500.txt](https://www.dropbox.com/s/c14gqhjbny0mlra/whas500.txt?dl=0)
-
-* [Diabetes Datasets](https://www.dropbox.com/s/xmcwcsxthfixlmb/Diabetes%20Datasets.zip?dl=0)
 
 # Data Dictionaries
 
