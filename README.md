@@ -44,6 +44,8 @@ Here are links to some of the data sets used in the code above.
 
 * [WHAS500.txt](https://www.dropbox.com/s/c14gqhjbny0mlra/whas500.txt?dl=0)
 
+* [Diabetes Datasets](https://www.dropbox.com/s/xmcwcsxthfixlmb/Diabetes%20Datasets.zip?dl=0)
+
 # Data Dictionaries
 
 * [WHAS Data](https://www.dropbox.com/s/hx37w38ruytjwi9/WHAS%20500%20Description.pdf?dl=0)
