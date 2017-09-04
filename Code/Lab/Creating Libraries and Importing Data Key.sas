@@ -1,26 +1,23 @@
-/*************************************************************************************************
-Lab Assignemnt
-Module 3: Creating Libraries and Importing Data
+* ============================================================================;
+* Lab: Creating Libraries and Importing Data
 
-This code is posted for your benefit; however, I highly recommend that you practice typing your
-own SAS programs as well. With the SAS programming language, as with all new languages, immersion 
-seems to be the best way to learn.
+* This code is posted for your benefit. However, I highly recommend that you 
+* practice typing your own SAS programs as well. With the SAS programming 
+* language, as with all new languages, immersion seems to be the best way to 
+* learn.
+* ============================================================================;
 
-*************************************************************************************************/
-/*
-Task 1.
-Using a LIBNAME statement, create a permanent SAS data set called lab3
-*/
-libname lab3 "Z:\Dropbox\UNTHSC Admin and Teaching\Courses\5151 - Spring 2015\BACH_EPID 5313
-\Lessons\03. Creating Libraries and Importing Data\Lab\Lab 3 Data Sets";
+* Task 1.
+* Using a LIBNAME statement, create a permanent SAS data set called lab3;
+libname lab3 "C:\Users\mbc0022\Desktop";
 
 
-/*
-Task 2. 
-Store the ncbirth30 data set from your previous homework assignment in the library lab3.
-*/
+* Task 2. 
+* Store the ncbirth30 data set from your previous homework assignment in the 
+* library lab3.;
 data lab3.ncbirth30;
-	input pid plural sex mage weeks marital racemom hispmom $ gained smoke drink tounces tgrams low premie;
+	input pid plural sex mage weeks marital racemom hispmom $ gained smoke 
+          drink tounces tgrams low premie;
 	datalines;
 	1 1 1 32 40 1 1 N 38 0 0 111 3146.85 0 0
 	2 1 2 32 37 1 1 N 34 0 0 116 3288.6 0 0
@@ -55,49 +52,49 @@ data lab3.ncbirth30;
 run;
 
 
-/*
-Task 3. 
-Use the CONTENTS procedure to produce a report about the contents of the lab3 library. 
-*/
+* Task 3. 
+* Use the CONTENTS procedure to produce a report about the contents of the 
+* lab3 library.;
 ods html file = 'C:\Users\mbc0022\Desktop\Task 4.html'; 
 proc contents data=lab3._all_;
 title "Viewing the Contents of the Lab3 Library";
 run;
 ods html close;
 
-/*
-Task 7. Write a new SAS program that that creates three permanent SAS data sets from 
-these raw data sets. All three SAS data sets should be stored in the permanent SAS library called choco.
-*/
 
-*Chocolate Study 1.xls;
-	*May need to import using Microsoft Excel Workbook on PC Files Server;
+* Task 7. Write a new SAS program that that creates three permanent SAS data 
+* sets from these raw data sets. All three SAS data sets should be stored in 
+* the permanent SAS library called choco.;
+libname choco "C:\Users\mbc0022\Desktop\choco";
+
+* Chocolate Study 1.xls;
+* May need to import using Microsoft Excel Workbook on PC Files Server;
 proc import out=choco.chocolate_study_1
-	datafile = 'Z:\Dropbox\UNTHSC Admin and Teaching\Courses\5147-Fall 2014\BACH_EPID 5313\Data\Chocolate\Chocolate Study 1.xls'
+	datafile = "C:\Users\mbc0022\Desktop\choco\Chocolate Study 1.xls"
 	dbms = xls replace;
 	sheet = 'choco1';
-	getnames = yes;
-	mixed = yes;
 run;
 
-*Chocolate Study 2.csv;
-	*Point and click;
+* Chocolate Study 2.csv;
 data choco.chocolate_study_2;
-	infile 'Z:\Dropbox\UNTHSC Admin and Teaching\Courses\5147-Fall 2014\BACH_EPID 5313\Data\Chocolate\Chocolate Study 2.csv' dsd firstobs=2;
-	input uin $ last $ first $ age grade school $ parent $ marry $ math1 math2 math3 read1 read2 read3
-	overall choco1 choco2 choco3 extra1 extra2 $ veggie;
+	infile "C:\Users\mbc0022\Desktop\choco\Chocolate Study 2.csv" 
+		dsd firstobs=2;
+	input uin $ last $ first $ age grade school $ parent $ marry $ math1 math2 
+          math3 read1 read2 read3 overall choco1 choco2 choco3 extra1 extra2 $ 
+          veggie;
 run;
 
-*Chocolate Study 3.txt (naive);
+* Chocolate Study 3.txt (naive);
 data choco.chocolate_study_3;
-	infile 'Z:\Dropbox\UNTHSC Admin and Teaching\Courses\5151 - Spring 2015\BACH_EPID 5313\Lessons\03. Creating Libraries and Importing Data\Lab\Lab 3 Data Sets\Chocolate Study 32.txt' firstobs=2;
-	input uin $ last $ first $ age grade school $ parent $ marry $ math1 math2 math3 read1 read2 read3
-	overall choco1 choco2 choco3 extra1 extra2 $ veggie;
+	infile "C:\Users\mbc0022\Desktop\choco\Chocolate Study 3.txt" firstobs=2;
+	input uin $ last $ first $ age grade school $ parent $ marry $ math1 math2 
+          math3 read1 read2 read3 overall choco1 choco2 choco3 extra1 extra2 $ 
+          veggie;
 run;
 
-*Chocolate Study 3.txt (correct);
+* Chocolate Study 3.txt (correct);
 data choco.chocolate_study_3;
-	infile 'Z:\Dropbox\UNTHSC Admin and Teaching\Courses\5151 - Spring 2015\BACH_EPID 5313\Lessons\03. Creating Libraries and Importing Data\Lab\Lab 3 Data Sets\Chocolate Study 32.txt' firstobs=2;
+	infile "C:\Users\mbc0022\Desktop\choco\Chocolate Study 3.txt" firstobs=2;
 	input @1 uin 5. 
 		  @6 last $9. 
 		  @15 first $8. 
@@ -122,28 +119,25 @@ data choco.chocolate_study_3;
 run;
 
 
-/*
-Task 8.
-Using the CONTENTS procedure, produce a report about the contents of the chocolate study 1 SAS data set. 
-Give the report a title with a description of what the report is about, a subtitle with your name, 
-and a footnote with the current date and time.
-*/
+* Task 8.
+* Using the CONTENTS procedure, produce a report about the contents of the 
+* chocolate study 1 SAS data set. Give the report a title with a description 
+* of what the report is about and a footnote with the current date and time.;
 ods html file = 'C:\Users\mbc0022\Desktop\Tasks 8-10.html'; 
 proc contents data = choco.chocolate_study_1;
 	title1 'Contents of the Chocolate study 1 Data Set';
-	title2 'Brad Cannell';
 	footnote "&sysdate and &systime";  
 run;
 
 
-/*
-Task 9. Using the PRINT procedure, produce a list report from chocolate study 1 that includes the following variables (in order): 
-ID number, Last Name, First Name, Choco1, Age, Grade, School. Set Title ‘your name’ and footnote ‘date and time’.
-*/
-proc print data=choco.chocolate_study_1;
+* Task 9. Using the PRINT procedure, produce a list report from chocolate 
+* study 1 that includes the following variables (in order): ID number, Last 
+* Name, First Name, Choco1, Age, Grade, School. Give the report a title with 
+* a description of what the report is about and a footnote with the current 
+* date and time.;
+proc print data = choco.chocolate_study_1;
 	var uin last first choco1 age grade school;
 	title1 'Listing of Selected Variables from the Chocolate study 1 Data Set';
-	title2 'Brad Cannell';
 	footnote "&sysdate and &systime";
 run;
 ods html close;
