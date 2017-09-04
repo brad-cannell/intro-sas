@@ -40,7 +40,7 @@ Here are links to some of the data sets used in the code above.
 
 * [BRFSS](https://www.cdc.gov/brfss/annual_data/annual_data.htm)
 
-* [Chocolate Studies](https://www.dropbox.com/s/u5y181fx5ibdbra/Chocolate%20Studies.zip?dl=0)
+* [Chocolate Studies](https://www.dropbox.com/s/1hjfu98ci37kolk/Chocolate%20Studies.zip?dl=0)
 
 * [Diabetes Datasets](https://www.dropbox.com/s/xmcwcsxthfixlmb/Diabetes%20Datasets.zip?dl=0)
 
