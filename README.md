@@ -50,6 +50,8 @@ Here are links to some of the data sets used in the code above.
 
 * [WHAS500.txt](https://www.dropbox.com/s/c14gqhjbny0mlra/whas500.txt?dl=0)
 
+* [WHAS500_2.xlsx](https://www.dropbox.com/s/8fv6ez45xvibrop/whas500_2.xlsx?dl=0)
+
 # Data Dictionaries
 
 * [NC Birth](https://www.dropbox.com/s/0x3zylubecnszwg/NCBIRTH%20Codebook.pdf?dl=0)
