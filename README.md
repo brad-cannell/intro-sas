@@ -44,6 +44,8 @@ Here are links to some of the data sets used in the code above.
 
 * [Diabetes Datasets](https://www.dropbox.com/s/xmcwcsxthfixlmb/Diabetes%20Datasets.zip?dl=0)
 
+* [Hospital Survey Data](https://www.dropbox.com/s/jfxisy5nrpi1qu9/Hospital%20Survey.xlsx?dl=0)
+
 * [NC Birth 30](https://www.dropbox.com/s/zanagy1iqtk3lvf/ncbirth30.sas7bdat?dl=0)
 
 * [NHANES](https://wwwn.cdc.gov/nchs/nhanes/)
