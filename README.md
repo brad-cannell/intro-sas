@@ -54,6 +54,8 @@ Here are links to some of the data sets used in the code above.
 
 # Data Dictionaries
 
+* [Hospital Survey Data](https://www.dropbox.com/s/d2cq63eliif2bc7/Codebook%20for%20Hospital%20Survey%20Data.pdf?dl=0)
+
 * [NC Birth](https://www.dropbox.com/s/0x3zylubecnszwg/NCBIRTH%20Codebook.pdf?dl=0)
 
 * [WHAS Data](https://www.dropbox.com/s/hx37w38ruytjwi9/WHAS%20500%20Description.pdf?dl=0)
