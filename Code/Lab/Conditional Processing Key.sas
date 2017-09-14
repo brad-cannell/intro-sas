@@ -329,7 +329,7 @@ run;
 proc print data = classurv.classurv6;
 	where gender = 1 & (age between 22 and 24);
 	var gender age;
-	title1 "List Report of Females who are Between the ages of 22 adn 24";
+	title1 "List Report of Females who are Between the ages of 22 and 24";
 	footnote "&sysdate at &systime";
 run;
 
