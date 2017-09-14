@@ -44,6 +44,8 @@ Here are links to some of the data sets used in the code above.
 
 * [Diabetes Datasets](https://www.dropbox.com/s/xmcwcsxthfixlmb/Diabetes%20Datasets.zip?dl=0)
 
+* [Hospital Survey Data](https://www.dropbox.com/s/jfxisy5nrpi1qu9/Hospital%20Survey.xlsx?dl=0)
+
 * [NC Birth 30](https://www.dropbox.com/s/zanagy1iqtk3lvf/ncbirth30.sas7bdat?dl=0)
 
 * [NHANES](https://wwwn.cdc.gov/nchs/nhanes/)
@@ -53,6 +55,8 @@ Here are links to some of the data sets used in the code above.
 * [WHAS500_2.xlsx](https://www.dropbox.com/s/8fv6ez45xvibrop/whas500_2.xlsx?dl=0)
 
 # Data Dictionaries
+
+* [Hospital Survey Data](https://www.dropbox.com/s/d2cq63eliif2bc7/Codebook%20for%20Hospital%20Survey%20Data.pdf?dl=0)
 
 * [NC Birth](https://www.dropbox.com/s/0x3zylubecnszwg/NCBIRTH%20Codebook.pdf?dl=0)
 
