@@ -42,6 +42,8 @@ Here are links to some of the data sets used in the code above.
 
 * [Chocolate Studies](https://www.dropbox.com/s/1hjfu98ci37kolk/Chocolate%20Studies.zip?dl=0)
 
+* [Class Survey Data 5141](https://www.dropbox.com/s/70q553h37cacjka/Class%20Survey%205141.csv?dl=0)
+
 * [Diabetes Datasets](https://www.dropbox.com/s/xmcwcsxthfixlmb/Diabetes%20Datasets.zip?dl=0)
 
 * [Hospital Survey Data](https://www.dropbox.com/s/jfxisy5nrpi1qu9/Hospital%20Survey.xlsx?dl=0)
@@ -55,6 +57,8 @@ Here are links to some of the data sets used in the code above.
 * [WHAS500_2.xlsx](https://www.dropbox.com/s/8fv6ez45xvibrop/whas500_2.xlsx?dl=0)
 
 # Data Dictionaries
+
+* [Class Survey Data](https://www.dropbox.com/s/1ajuz8utxappvop/Class%20Survey%20Data%20Codebook.pdf?dl=0)
 
 * [Hospital Survey Data](https://www.dropbox.com/s/d2cq63eliif2bc7/Codebook%20for%20Hospital%20Survey%20Data.pdf?dl=0)
 
