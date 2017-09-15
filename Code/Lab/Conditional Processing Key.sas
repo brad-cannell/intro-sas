@@ -212,6 +212,9 @@ data classurv.classurv4;
 	year + 1949;
 run;
 
+
+* Task 6. 
+* Create, view, and compare a list report of classurv4 with classurv3.; 
 proc print data = classurv.classurv3;
 	title1 "Comparing classurv3 to classurv4";
 	footnote "&sysdate at &systime";
