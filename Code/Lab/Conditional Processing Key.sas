@@ -154,34 +154,34 @@ run;
 viewer.htm#a000695119.htm;
 data classurv.classurv3;
 	set classurv.classurv2;
-	rename	q13 = ins/*RENAME statement does not change appearance of Viewtable Window - Labels*/
-			q14 = persdoc
-			q17 = veteran
-			q18 = marital
-			q20 = employ
+	rename	q13   = ins       /* RENAME statement does not change appearance of */ 
+			q14   = persdoc   /* Viewtable Window - Labels */
+			q17   = veteran
+			q18   = marital
+			q20   = employ
 			q21_1 = salary
-			q24 = year
-			q25 = month
-			q26 = gender;
+			q24   = year
+			q25   = month
+			q26   = gender;
 
-	label	q13 = "Any Insurance"
-			q14 = "Personal Doctor"
-			q17 = "Veteran Status"
-			q18 = "Marital Status"
-			q20 = "Employment Status"
+	label	q13   = "Any Insurance"
+			q14   = "Personal Doctor"
+			q17   = "Veteran Status"
+			q18   = "Marital Status"
+			q20   = "Employment Status"
 			q21_1 = "Annual Salary"
-			q24 = "Year of Birth"
-			q25 = "Month of Birth"
-			q26 = "Gender";
+			q24   = "Year of Birth"
+			q25   = "Month of Birth"
+			q26   = "Gender";
 
-	format	q13 standard01_.
-			q14 persdoc.
-			q17 standard01_.
-			q18 marital.
-			q20 employ.
+	format	q13   standard01_.
+			q14   persdoc.
+			q17   standard01_.
+			q18   marital.
+			q20   employ.
 			q21_1 dollar10.2
-			q25 month.
-			q26 gender.;
+			q25   month.
+			q26   gender.;
 			
 run;
 
