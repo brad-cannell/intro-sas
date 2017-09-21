@@ -46,11 +46,17 @@ Here are links to some of the data sets used in the code above.
 
 * [Diabetes Datasets](https://www.dropbox.com/s/xmcwcsxthfixlmb/Diabetes%20Datasets.zip?dl=0)
 
+* [DFW Temps 2012](https://www.dropbox.com/s/ok5athwxaecq3r8/dfwtemps2012.sas7bdat?dl=0)
+
 * [Hospital Survey Data](https://www.dropbox.com/s/jfxisy5nrpi1qu9/Hospital%20Survey.xlsx?dl=0)
 
 * [NC Birth 30](https://www.dropbox.com/s/zanagy1iqtk3lvf/ncbirth30.sas7bdat?dl=0)
 
 * [NHANES](https://wwwn.cdc.gov/nchs/nhanes/)
+
+* [Speed](https://www.dropbox.com/s/lvic1thw8tci008/Speed.xls?dl=0)
+
+* [Students](https://www.dropbox.com/s/fb3m1xdoxyb0evf/students.sas7bdat?dl=0)
 
 * [WHAS500.txt](https://www.dropbox.com/s/c14gqhjbny0mlra/whas500.txt?dl=0)
 
