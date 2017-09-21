@@ -1,18 +1,16 @@
-/*************************************************************************************************
-Lab Assignemnt
-Module 6: Iterative Processing and Arrays
+* ============================================================================;
+* Lab: Iterative Processing and Arrays
 
-This code is posted for your benefit; however, I highly recommend that you practice typing your
-own SAS programs as well. With the SAS programming language, as with all new languages, immersion 
-seems to be the best way to learn.
+* This code is posted for your benefit. However, I highly recommend that you 
+* practice typing your own SAS programs as well. With the SAS programming 
+* language, as with all new languages, immersion seems to be the best way to 
+* learn.
+* ============================================================================;
 
-*************************************************************************************************/
 
-/*
-Task 1. 
-Get the data sets named dfwtemps2012, students, and speed from the course website and 
-import them into SAS 
-*/
+* Task 1. 
+* Get the data sets named dfwtemps2012, students, and speed from the course 
+* website and import them into SAS.;
 libname temps "Z:\Dropbox\UNTHSC Admin and Teaching\Courses\5147-Fall 2014\BACH_EPID 5313\Data\Average Temperatures\";
 libname	student "Z:\Dropbox\UNTHSC Admin and Teaching\Courses\5147-Fall 2014\BACH_EPID 5313\Data\Students\";
 libname speed "Z:\Dropbox\UNTHSC Admin and Teaching\Courses\5147-Fall 2014\BACH_EPID 5313\Data\Speed\";
@@ -23,11 +21,10 @@ proc import out = speed.speed1
 run;
 
 
-/*
-Task 2. 
-Use ARRAYS and DO loops to recode the variables SATS1 and SATS2 in the students data set. 
-Recode the values 7, 8, and 9 to missing.
-*/
+* Task 2. 
+* Use ARRAYS and DO loops to recode the variables SATS1 and SATS2 in the 
+* students data set. Recode the values 7, 8, and 9 to missing.;
+
 *Starting with an example of the naive way of programming this task;
 data student.students1;
 	set student.students;
@@ -44,25 +41,21 @@ data student.students1 (drop = i);
 run;
 
 
-/*
-Task 3. 
-Create a list report that shows the values of SATS1 and SATS2 were properly recoded. 
-Give the report a descriptive title, a subtitle with your name, and a footnote with the current 
-date and time.
-*/
+* Task 3. 
+* Create a list report that shows the values of SATS1 and SATS2 were properly 
+* recoded. Give the report a descriptive title and a footnote with the current 
+* date and time.;
 proc print data = student.students1;
 	title1 "List Report of the Students Data Set";
-	title2 "Brad Cannell";
 	footnote2 "Created on &sysday, &sysdate";
 run;
 
 
-/*
-Task 4. 
-Use ARRAYS and DO loops to create five new variables called nx1-nx5 as the squared value 
-of the variables x1-x5 in the speed data set. Use ARRAYS and DO loops to create three new 
-variables called ny1-ny3 as the square root of the variables y1-y3 in the speed data set.
-*/
+* Task 4. 
+* Use ARRAYS and DO loops to create five new variables called nx1-nx5 as the 
+* squared value of the variables x1-x5 in the speed data set. Use ARRAYS and 
+* DO loops to create three new variables called ny1-ny3 as the square root of 
+* the variables y1-y3 in the speed data set.;
 
 *Create NX1-NX5;
 data speed.speed2;
@@ -85,30 +78,25 @@ data speed.speed3;
 run;
 
 
-/*
-Task 5. 
-Create a list report that includes the variables you just created. Give the report a 
-descriptive title, a subtitle with your name, and a footnote with the current date and time.
-*/
+* Task 5. 
+* Create a list report that includes the variables you just created. Give the 
+* report a descriptive title and a footnote with the current date and time.;
 proc print data = speed.speed3;
 	title1 "List Report of the Speed Data Set";
-	title2 "Brad Cannell";
 	footnote2 "Created on &sysday, &sysdate";
 run;
 
 
-/*
-Task 6. 
-Figure out the variables that have missing values that need to be recoded to “.” in the 
-dfwtemps2012 data set. Use an ARRAY and DO loop to recode all missing values to “.” Drop the 
-index variable from your data set. Create a list report that shows that all the missing values 
-were properly recoded. Give the report a descriptive title, a subtitle with your name, and a 
-footnote with the current date and time.
-*/
+* Task 6. 
+* Figure out the variables that have missing values that need to be recoded 
+* to “.” in the dfwtemps2012 data set. Use an ARRAY and DO loop to recode all 
+* missing values to “.” Drop the index variable from your data set. Create a 
+* list report that shows that all the missing values were properly recoded. 
+* Give the report a descriptive title and a footnote with the current date 
+* and time.;
 proc freq data = temps.dfwtemps2012;
 	table _all_;
 	title1 "Frequency Report for 2012 Temperatures";
-	title2 "Brad Cannell";
 	footnote2 "Created on &sysday, &sysdate";
 run;
 
@@ -130,18 +118,15 @@ run;
 
 proc print data = temps.dfwtemps2012_2;
 	title1 "List Report for 2012 Temperatures";
-	title2 "Brad Cannell";
 	footnote2 "Created on &sysday, &sysdate";
 run;
 
 
-/*
-Task 7. 
-Continuing to use the dfwtemps2012 data set, use ARRAYs and DO loops to create new 
-variables containing the average daily temperatures in Celsius. Create a list report that 
-includes the temperature variables you just created. Add the appropriate titles and footnotes to 
-the list report.
-*/
+* Task 7. 
+* Continuing to use the dfwtemps2012 data set, use ARRAYs and DO loops to 
+* create new variables containing the average daily temperatures in Celsius. 
+* Create a list report that includes the temperature variables you just 
+* created. Add the appropriate title and footnote to the list report.;
 proc print data = temps.dfwtemps2012_2;
 run;
 
@@ -158,27 +143,27 @@ proc print data = temps.dfwtemps2012_3;
 	var month temp_c1-temp_c31;
 	format temp_c1-temp_c31 4.1; /*If we want them displayed in the same format as temp_f*/
 	title1 "List Report for 2012 Temperatures";
-	title2 "Brad Cannell";
 	footnote2 "Created on &sysday, &sysdate";
 run;
 
 
-/*
-Task 8. 
-You look back at the original assignment and notice that there is a note written on the 
-top to correct the following mistakes.
+* Task 8. 
+* You look back at the original assignment and notice that there is a note 
+* written on the top to correct the following mistakes.
 
-Mistake 1: The values for the temperature in Fahrenheit for the first 15 days of all months were 
-entered 1 degree (Fahrenheit) higher than the actual temperature. (i.e. if the actual temperature 
-was 44.4 degrees, then the entered value in the data set was 45.4 degrees)
+* Mistake 1: The values for the temperature in Fahrenheit for the first 15 
+* days of all months were entered 1 degree (Fahrenheit) higher than the actual 
+* temperature. (i.e. if the actual temperature was 44.4 degrees, then the 
+* entered value in the data set was 45.4 degrees)
 
-Mistake 2: For all other days in all months, the value was entered 1 degree (Fahrenheit) lower 
-than the actual temperature. (i.e. if the actual temperature was 45.8 degrees, then the value 
-entered in the data set was 44.8 degrees)
+* Mistake 2: For all other days in all months, the value was entered 1 degree 
+* (Fahrenheit) lower than the actual temperature. (i.e. if the actual 
+* temperature was 45.8 degrees, then the value entered in the data set was 
+* 44.8 degrees)
 
-Now it’s your responsibility to correct these mistakes in SAS, and record the actual temperatures 
-in Fahrenheit. Please use ARRAYs to make the new variables when completing this task.
-*/
+* Now it’s your responsibility to correct these mistakes in SAS, and record 
+* the actual temperatures in Fahrenheit. Please use ARRAYs to make the new 
+* variables when completing this task.;
 data temps.dfwtemps2012_4;
 	set temps.dfwtemps2012_3;
 		array correct_temp_f {31};
