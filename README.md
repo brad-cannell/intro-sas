@@ -38,6 +38,8 @@ Instructional videos that provide context for the code are available on my [YouT
 
 Here are links to some of the data sets used in the code above.
 
+* [Birthdays](https://www.dropbox.com/s/1xnuchmi9wxroyo/birthdays.sas7bdat?dl=0)
+
 * [BRFSS](https://www.cdc.gov/brfss/annual_data/annual_data.htm)
 
 * [Chocolate Studies](https://www.dropbox.com/s/1hjfu98ci37kolk/Chocolate%20Studies.zip?dl=0)
@@ -45,6 +47,8 @@ Here are links to some of the data sets used in the code above.
 * [Class Survey Data 5141](https://www.dropbox.com/s/70q553h37cacjka/Class%20Survey%205141.csv?dl=0)
 
 * [Diabetes Datasets](https://www.dropbox.com/s/xmcwcsxthfixlmb/Diabetes%20Datasets.zip?dl=0)
+
+* [DFW Temps 1995](https://www.dropbox.com/s/djg6i1akl5awdli/dfwtemps1995.sas7bdat?dl=0)
 
 * [DFW Temps 2012](https://www.dropbox.com/s/ok5athwxaecq3r8/dfwtemps2012.sas7bdat?dl=0)
 
