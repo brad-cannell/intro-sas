@@ -280,10 +280,10 @@ run;
 data classurv.classurv6;
 	set classurv.classurv5;
 	if missing(salary) then salary4cat = .;
-	else if (0 <= salary < 2500) then salary4cat = 1;
-	else if (2500 <= salary < 11492) then salary4cat = 2;
-	else if (11492 <= salary < 39130) then salary4cat = 3;
-	else if salary >= 39130 then salary4cat = 4;
+	else if salary <= 2500 then salary4cat = 1;
+	else if (2500 < salary <= 11492) then salary4cat = 2;
+	else if (11492 < salary <= 39130) then salary4cat = 3;
+	else if salary > 39130 then salary4cat = 4;
 run;
 
 
@@ -300,7 +300,7 @@ run;
 * Task 13. 
 * Determine the percentage of participants in each of the salary categories.;
 proc freq data = classurv.classurv6;
-	tables salary4cat * gender;
+	tables salary4cat * gender / norow nopercent;
 	title1 "Percentage of Students in each Category of Salary";
 	title2 "By Gender";
 	footnote "&sysdate at &systime";
@@ -309,10 +309,10 @@ run;
 * Task 13: Alternative way of categorizing salary and viewing one-way 
 * frequency report;
 proc format;
-	value	salary	low-1 = '1st Quartile'
-					1-<10046 = '2nd Quartile'
-					10046-<38813 = '3rd Quartile'
-					38813-high = '4th Quartile';
+	value	salary	low-2500 = '1st Quartile'
+					>2500-11492 = '2nd Quartile'
+					>11492-39130 = '3rd Quartile'
+					39130-high = '4th Quartile';
 run;
 
 proc freq data = classurv.classurv6;
