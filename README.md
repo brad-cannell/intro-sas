@@ -44,6 +44,8 @@ Here are links to some of the data sets used in the code above.
 
 * [Chocolate Studies](https://www.dropbox.com/s/1hjfu98ci37kolk/Chocolate%20Studies.zip?dl=0)
 
+* [Cities SES](https://www.dropbox.com/s/6nt00hmdzfdigp3/City%20SES.xlsx?dl=0)
+
 * [Class Survey Data 5141](https://www.dropbox.com/s/70q553h37cacjka/Class%20Survey%205141.csv?dl=0)
 
 * [Diabetes Datasets](https://www.dropbox.com/s/xmcwcsxthfixlmb/Diabetes%20Datasets.zip?dl=0)
