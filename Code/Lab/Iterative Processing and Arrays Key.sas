@@ -11,12 +11,12 @@
 * Task 1. 
 * Get the data sets named dfwtemps2012, students, and speed from the course 
 * website and import them into SAS.;
-libname temps "Z:\Dropbox\UNTHSC Admin and Teaching\Courses\5147-Fall 2014\BACH_EPID 5313\Data\Average Temperatures\";
-libname	student "Z:\Dropbox\UNTHSC Admin and Teaching\Courses\5147-Fall 2014\BACH_EPID 5313\Data\Students\";
-libname speed "Z:\Dropbox\UNTHSC Admin and Teaching\Courses\5147-Fall 2014\BACH_EPID 5313\Data\Speed\";
+libname speed "C:\Users\mbc0022\Desktop";
+libname	student "C:\Users\mbc0022\Desktop";
+libname temps "C:\Users\mbc0022\Desktop";
 
 proc import out = speed.speed1
-	datafile = "Z:\Dropbox\UNTHSC Admin and Teaching\Courses\5147-Fall 2014\BACH_EPID 5313\Data\Speed\Speed.xls"
+	datafile = "C:\Users\mbc0022\Desktop\Speed.xls"
 	dbms = XLS replace;
 run;
 
