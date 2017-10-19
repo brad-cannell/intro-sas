@@ -1,7 +1,7 @@
 * ============================================================================;
 * Introduction to By-Group Processing
 
-* Notes 
+* Notes
 	* make an age at baseline variable and carry it forward - expand age across time
 	* Create variables obs, final obs, finalage, numobs finalyears
 	* Distribute total years across observations
@@ -12,9 +12,9 @@
 	* LOCF / LOCB
 	* Distribute EVER variables
 
-* This code is posted for your benefit. However, I highly recommend that you 
-* practice typing your own SAS programs as well. With the SAS programming 
-* language, as with all new languages, immersion seems to be the best way to 
+* This code is posted for your benefit. However, I highly recommend that you
+* practice typing your own SAS programs as well. With the SAS programming
+* language, as with all new languages, immersion seems to be the best way to
 * learn.
 * ============================================================================;
 
@@ -26,7 +26,7 @@ data aws;
 	set "\\Mac\Dropbox\Datasets\Aging Women Study\aging_womens_study.sas7bdat";
 run;
 
-proc contents data = aws; 
+proc contents data = aws;
 run;
 * 246363 observations and 10 variables;
 
@@ -37,13 +37,13 @@ run;
 
 
 * ============================================================================;
-* Notice that each participant has a variable number of observations and that 
+* Notice that each participant has a variable number of observations and that
 * the timing of their observations are inconsistent and irregularly spaced.;
 
-* A common question to ask in this situation is, "how many observations does 
+* A common question to ask in this situation is, "how many observations does
 * each woman have?";
 
-* Currently, what tools do we have to answer that question?; 
+* Currently, what tools do we have to answer that question?;
 
 * Let's start by trying to figure that out with a very simple example.;
 * ============================================================================;
@@ -54,7 +54,7 @@ data ds;
 	1 0 1
 	1 24 1
 	2 -3 0
-	2 0 0 
+	2 0 0
 	2 117 1
 	;
 run;
@@ -64,8 +64,8 @@ run;
 
 
 * ============================================================================;
-* Like the previous example, the data in this example is in long format. 
-* Additionally, the timing of observations are inconsistent and irregularly 
+* Like the previous example, the data in this example is in long format.
+* Additionally, the timing of observations are inconsistent and irregularly
 * spaced.;
 
 * In this simple data set, we know that each participant has 3 observations,
@@ -178,13 +178,8 @@ data aws2;
 run;
 
 
-* Create group number; * Left off here...;
+* Create group number;
 
 * Carry forward race;
 
 * Carry forward age;
-
-
-
-
-
