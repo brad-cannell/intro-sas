@@ -169,15 +169,6 @@ proc means data = ds_2;
 run;
 
 
-* Create obs number;
-data aws2;
-	set aws;
-	by id;
-	if first.id = 1 then obs = 0;
-	obs = obs + 1;
-run;
-
-
 * Create group number;
 
 * Carry forward race;
