@@ -11,6 +11,7 @@
 * Task 1. 
 * Import the file called Class Survey 5141.csv as a new SAS data set called 
 * classurv1 in a new SAS library called classurv.;
+* ============================================================================;
 libname classurv "C:\Users\mbc0022\Desktop";
 
 proc import out = classurv.classurv1
@@ -26,6 +27,7 @@ run;
 * names in the survey data set may be slightly different than the variable names 
 * listed in the codebook): Insurance, personal doctor, veteran, marital status, 
 * employment, salary, year born, month born, gender.;
+* ============================================================================;
 data classurv.classurv2;
 	set classurv.classurv1;
 	keep q13 q14 q17 q18 q20 q21_1 q24 q25 q26;
@@ -35,6 +37,7 @@ run;
 * Task 3. 
 * Create user-defined formats for the values of all categorical variables in the 
 * data set (i.e. NOT salary or year of birth).;
+* ============================================================================;
 proc format;
 	value	standard01_	0 = 'No'
 						1 = 'Yes';
@@ -147,11 +150,13 @@ run;
 * Then apply labels to the variable names. Finally, in the same DATA step, apply 
 * the user-defined formats you created as well as an appropriate SAS format to 
 * the values of the annual salary variable.;
+* ============================================================================;
 
 
 * Rename variables and Apply Formats;
 * http://support.sas.com/documentation/cdl/en/lrcon/62955/HTML/default/
 viewer.htm#a000695119.htm;
+* ============================================================================;
 data classurv.classurv3;
 	set classurv.classurv2;
 	rename	q13   = ins       /* RENAME statement does not change appearance of */ 
@@ -195,6 +200,7 @@ run;
 * Create a new data set named classsurv4. Recode the values in the year of birth 
 * variable to the actual year of birth, as opposed to the coded value for the 
 * year of birth. (HINT: This should only require one line of code).; 
+* ============================================================================;
 data classurv.classurv4;
 	set classurv.classurv3;
 	year = year + 1949;
@@ -215,6 +221,7 @@ run;
 
 * Task 6. 
 * Create, view, and compare a list report of classurv4 with classurv3.; 
+* ============================================================================;
 proc print data = classurv.classurv3;
 	title1 "Comparing classurv3 to classurv4";
 	footnote "&sysdate at &systime";
@@ -233,6 +240,7 @@ run;
 * Additionally, create another calculated variable that contains the age of each 
 * student (as of their last birthday) at the time of the survey (Assume everyone 
 * took the survey on January 10, 2014). Name this variable age.;
+* ============================================================================;
 data classurv.classurv5;
 	set classurv.classurv4;
 	dob = mdy(month, 15, year);
@@ -248,6 +256,7 @@ run;
 
 * Task 8. 
 * Determine the average age of students on the first day of class.;
+* ============================================================================;
 proc means data = classurv.classurv5;
 	var age;
 	title1 "Average Age of Students on the First Day of Class";
@@ -256,6 +265,7 @@ run;
 
 * Task 9. 
 * Create a histogram that depicts the distribution of students’ salaries.;
+* ============================================================================;
 proc sgplot data = classurv.classurv5;
 	histogram salary;
 	density salary;
@@ -265,6 +275,7 @@ run;
 
 
 * Task 10. Determine quartiles of the variable for annual salary.;
+* ============================================================================;
 proc univariate data = classurv.classurv5;
 	var salary;
 	ods select quantiles; /*Display only the quantiles table from PROC UNIVARIATE*/
@@ -277,6 +288,7 @@ run;
 * Create a new SAS data set called classurv6. Use conditional 
 * processing to categorize participants into groups defined by quartiles of 
 * salary;
+* ============================================================================;
 data classurv.classurv6;
 	set classurv.classurv5;
 	if missing(salary) then salary4cat = .;
@@ -290,6 +302,7 @@ run;
 * Task 12. 
 * Create a list report to view the continuous salary variable and the 
 * categorized salary variable only.;
+* ============================================================================;
 proc print data = classurv.classurv6;
 	var salary salary4cat;
 	title1 "Comparing Salary and Salary4cat";
@@ -299,6 +312,7 @@ run;
 
 * Task 13. 
 * Determine the percentage of participants in each of the salary categories.;
+* ============================================================================;
 proc freq data = classurv.classurv6;
 	tables salary4cat * gender / norow nopercent;
 	title1 "Percentage of Students in each Category of Salary";
@@ -329,6 +343,7 @@ run;
 * who are between 22 and 24 years old (inclusive). This list report should 
 * include only the obs column, and the variables for gender, and age, in the 
 * given order.;
+* ============================================================================;
 proc print data = classurv.classurv6;
 	where gender = 1 & (age between 22 and 24);
 	var gender age;
@@ -342,6 +357,7 @@ run;
 * midterm exam weight variable and a final exam weight variable. For males the 
 * midterm is worth 40% and the final is worth 60%. For females the midterm is 
 * worth 60% and the final is worth 40%.;
+* ============================================================================;
 data classurv.classurv7;
 	set classurv.classurv6;
 	if gender = 1 then
@@ -360,6 +376,7 @@ run;
 * Task 16.
 * Create a list report that includes the variables for gender, midterm weight, 
 * and final weight.;
+* ============================================================================;
 proc print data = classurv.classurv7;
 	var gender midterm final;
 	title1 "List Report of Exam Weights";
