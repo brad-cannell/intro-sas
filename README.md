@@ -74,6 +74,10 @@ Here are links to some of the data sets used in the code above.
 
 * [WHAS500_2.xlsx](https://www.dropbox.com/s/8fv6ez45xvibrop/whas500_2.xlsx?dl=0)
 
+---
+
+* [Kaggle](https://www.kaggle.com/): Kaggle isn't a data set. It is a website devoted to data science and machine learning. However, you can find many interesting data set (and other interesting stuff) on the Kaggle website.
+
 # Data Dictionaries
 
 * [Class Survey Data](https://www.dropbox.com/s/1ajuz8utxappvop/Class%20Survey%20Data%20Codebook.pdf?dl=0)
