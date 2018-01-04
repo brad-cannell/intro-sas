@@ -9,12 +9,14 @@
 
 * Task 1.
 * Using a LIBNAME statement, create a permanent SAS data set called lab3;
+* ============================================================================;
 libname lab3 "C:\Users\mbc0022\Desktop";
 
 
 * Task 2. 
 * Store the ncbirth30 data set from your previous homework assignment in the 
 * library lab3.;
+* ============================================================================;
 data lab3.ncbirth30;
 	input pid plural sex mage weeks marital racemom hispmom $ gained smoke 
           drink tounces tgrams low premie;
@@ -55,6 +57,7 @@ run;
 * Task 3. 
 * Use the CONTENTS procedure to produce a report about the contents of the 
 * lab3 library.;
+* ============================================================================;
 ods html file = 'C:\Users\mbc0022\Desktop\Task 4.html'; 
 proc contents data=lab3._all_;
 title "Viewing the Contents of the Lab3 Library";
@@ -65,6 +68,7 @@ ods html close;
 * Task 7. Write a new SAS program that that creates three permanent SAS data 
 * sets from these raw data sets. All three SAS data sets should be stored in 
 * the permanent SAS library called choco.;
+* ============================================================================;
 libname choco "C:\Users\mbc0022\Desktop\choco";
 
 * Chocolate Study 1.xls;
@@ -123,6 +127,7 @@ run;
 * Using the CONTENTS procedure, produce a report about the contents of the 
 * chocolate study 1 SAS data set. Give the report a title with a description 
 * of what the report is about and a footnote with the current date and time.;
+* ============================================================================;
 ods html file = 'C:\Users\mbc0022\Desktop\Tasks 8-10.html'; 
 proc contents data = choco.chocolate_study_1;
 	title1 'Contents of the Chocolate study 1 Data Set';
@@ -135,6 +140,7 @@ run;
 * Name, First Name, Choco1, Age, Grade, School. Give the report a title with 
 * a description of what the report is about and a footnote with the current 
 * date and time.;
+* ============================================================================;
 proc print data = choco.chocolate_study_1;
 	var uin last first choco1 age grade school;
 	title1 'Listing of Selected Variables from the Chocolate study 1 Data Set';
