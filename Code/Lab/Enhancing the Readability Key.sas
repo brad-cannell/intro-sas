@@ -11,7 +11,7 @@
 * Create a new permanent SAS data set from the hospital survey data called hosp1. 
 * In the same step, use the Hospital Survey Codebook to create SAS labels for 
 * all variables in the data set.;
-
+* ============================================================================;
 libname hosp "C:\Users\mbc0022\Desktop";
 
 proc import out = hosp.hosp1
@@ -40,6 +40,7 @@ run;
 * hosp1 data set. 
 * Save it as Lab4_Task2.html. Give the report a descriptive title and a 
 * footnote with the current date and time.;
+* ============================================================================;
 ods html file = 'C:\Users\mbc0022\Desktop\Lab4_Task2.html'; 
 proc contents data = hosp.hosp1 varnum;
 	title1 "Viewing the Descriptor Portion of HOSP1";
@@ -51,6 +52,7 @@ ods html close;
 * Task 3. 
 * Using the FORMAT procedure, create formats for the following variables: 
 * ins, pro1, pro2, food, clean, check1, check2, and reco.;
+* ============================================================================;
 proc format;
 	value	ins	        0 = "No Insurance"
 						1 = "Employer"
@@ -78,6 +80,7 @@ run;
 * Make sure to apply the variable labels you created in Task 1, and the formats 
 * you created in Task 4. Save it as Lab4_Task4.html.Give the report a 
 * descriptive title, and a footnote with the current date and time.;
+* ============================================================================;
 ods html file = 'C:\Users\mbc0022\Desktop\Lab4_Task4.html'; 
 proc print data = hosp.hosp1 (obs = 10) label;
 	format 	ins ins. 
@@ -93,6 +96,7 @@ ods html close;
 * Run the CONTENTS procedure on the hosp1 data set. 
 * Save the report as Lab4_Task5.html. Give the report a descriptive title, 
 * and a footnote with the current date and time.;
+* ============================================================================;
 ods html file = 'C:\Users\mbc0022\Desktop\Lab4_Task5.html'; 
 proc contents data = hosp.hosp1 varnum;
 	title1 "Viewing the Descriptor Portion of HOSP1";
@@ -105,6 +109,7 @@ ods html close;
 * In a DATA step create a new data set called hosp2.
 * Permanently assign formats for the following variables:
 * ins, pro1, pro2, food, clean, check1, check2, and reco.;
+* ============================================================================;
 data hosp.hosp2;
 	set hosp.hosp1;
 	format 	ins ins. 
@@ -118,6 +123,7 @@ run;
 * Save the report as Lab4_Task7.html. 
 * Give the report a descriptive title and a footnote with the current date and 
 * time.;
+* ============================================================================;
 ods html file = 'C:\Users\mbc0022\Desktop\Lab4_Task7.html'; 
 proc contents data = hosp.hosp2;
 	title1 "Viewing the Descriptor Portion of HOSP2";
@@ -129,6 +135,7 @@ ods html close;
 * Task 8. Create a list report of observations 5 -15 only. 
 * Save the report as Lab4_Task8.html. Give the report a descriptive 
 * title and a footnote with the current date and time.;
+* ============================================================================;
 ods html file = 'C:\Users\mbc0022\Desktop\Lab4_Task8.html'; 
 proc print data = hosp.hosp2 (firstobs = 5 obs = 15) label;
 	title1 "Viewing Observations 5-15 of HOSP2";
