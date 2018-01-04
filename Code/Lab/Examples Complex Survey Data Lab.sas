@@ -1,14 +1,15 @@
-/*
-Weighted Survey Analysis Lab Examples
-1. Data checking
-2. Using PROC SURVEYREG
-*/
+* ============================================================================;
+* Lab: Complex Survey Data Analysis
+* 1. Data checking
+* 2. Using PROC SURVEYREG
+* ============================================================================;
 
 * Load NHANES 2011-2012 Medical Condtions Data (MCQ_G) into work library;
 * Load NHANES 2011-2012 Demographic Data (DEMO_G) into work library;
 * Get NHANES 2011-2012 Medical Conditions codebook;
 
 * What proportion of Americans have had an asthma attack in the past year?;
+* ============================================================================;
 data asthma1;
 	merge demo_g mcq_g;
 	by seqn;
@@ -44,6 +45,7 @@ run;
 
 * Why so many missing?;
 * Look at codebook and/or use crosstabs with missing option;
+* ============================================================================;
 proc freq data = asthma2;
 	tables past_year*asthma_ever / missing;
 run;
@@ -68,6 +70,7 @@ run;
 
 
 *PROC SURVEYREG to test for difference in means;
+* ============================================================================;
 proc surveymeans data = asthma3;
 	domain past_year2;
 	var age;
