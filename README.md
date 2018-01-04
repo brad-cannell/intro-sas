@@ -76,7 +76,7 @@ Here are links to some of the data sets used in the code above.
 
 ---
 
-* [Kaggle](https://www.kaggle.com/): Kaggle isn't a data set. It is a website devoted to data science and machine learning. However, you can find many interesting data set (and other interesting stuff) on the Kaggle website.
+* [Kaggle](https://www.kaggle.com/): Kaggle isn't a data set. It is a website devoted to data science and machine learning. However, you can find many interesting data sets (and other interesting stuff) on the Kaggle website.
 
 # Data Dictionaries
 
