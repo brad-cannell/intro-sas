@@ -1,7 +1,7 @@
 * ============================================================================;
 * Lab: Descriptive Analysis II
 
-* In this weekís lab you will practice describing relationships between 
+* In this week‚Äôs lab you will practice describing relationships between 
 * variables. Specifically, you will practice basic descriptive techniques 
 * appropriate for analysis of a continuous predictor variable and continuous 
 * outcome variable, a categorical predictor variable and a continuous outcome 
@@ -16,12 +16,12 @@
 
 * Task 1. Read the WHAS 500 data into SAS for analysis.
 * 1.In your web browser, go the course GitHub page.
-* 2.Scroll down to the section of the page that is labeled ìData Dictionariesî
-* 3.Click on the ìWHAS Dataî link.
+* 2.Scroll down to the section of the page that is labeled ‚ÄúData Dictionaries‚Äù
+* 3.Click on the ‚ÄúWHAS Data‚Äù link.
 * 4.Look over the data dictionary to learn a little bit about the data you 
 *   will be working with.
-* 5.Scroll down to the section of the page that is labeled ìDataî
-* 6.Click on the ìWHAS500.txtî link
+* 5.Scroll down to the section of the page that is labeled ‚ÄúData‚Äù
+* 6.Click on the ‚ÄúWHAS500.txt‚Äù link
 * 7.Look over the data
 * 8.In SAS, write a SAS data step that will read-in this data and use it to 
 *   create a new SAS dataset.
@@ -30,7 +30,7 @@
 *     statement, and the values in your DATALINES statement in SAS.
 * 9.Run the data step you created in SAS. You should have a new SAS dataset in 
 *   your work library that contains 500 observations and 22 variables.;
-
+* ============================================================================;
 data whas;
 	input id age gender hr sysbp diasbp bmi cvd afb sho chf av3 miord mitype 
 		  year $ admitdate $ disdate $ fdate $ los dstat lenfol fstat;
@@ -542,7 +542,7 @@ run;
 * Task 2: Use the CORR Procedure;
 *	a. Explore the relationship between age and initial heart rate.
 *	b. Examine the correlation coefficient and the p-value.;
-
+* ============================================================================;
 proc corr data = whas;
 	var age hr;
 run;
@@ -551,7 +551,7 @@ run;
 * Task 3: Explore the relationship between age and initial heart rate by 
 * creating a scatter plot. Make sure to add an OLS regression line. View this 
 * scatter plot again separately for men and women.;
-
+* ============================================================================;
 proc sgplot data = whas;
 	scatter x = age y = sysbp;
 	reg x = age y = sysbp;
@@ -564,7 +564,7 @@ run;
 
 
 * Task 4. Calculate mean bmi within levels of gender using the MEANS procedure;
-
+* ============================================================================;
 proc means data = whas;
 	class gender;
 	var bmi;
@@ -572,7 +572,7 @@ run;
 
 
 * Task 5. Produce side-by-side histograms of sysbp comparing gender.;
-
+* ============================================================================;
 proc sgpanel data = whas;
 	panelby gender;
 	histogram sysbp;
@@ -580,7 +580,7 @@ proc sgpanel data = whas;
 run;
 
 * Task 6. side-by-side boxplots of bmi comparing gender.;
-
+* ============================================================================;
 proc sgplot data = whas;
 	vbox bmi / category = gender;
 run;
@@ -588,6 +588,7 @@ run;
 
 * Task 7. Create a two-way frequency table for cohort year and history of 
 * cardiovascular disease.;
+* ============================================================================;
 proc freq data = whas;
 	tables year * cvd;
 run;
@@ -595,7 +596,7 @@ run;
 * Task 8. Create multiple two-way frequency tables for cohort year and atrial 
 * fibrillation, cohort year and cardiogenic shock, cohort year and congestive 
 * heart complications, and cohort year and complete heart block.;
-
+* ============================================================================;
 proc freq data = whas;
 	tables year * (afb sho chf av3);
 run;
