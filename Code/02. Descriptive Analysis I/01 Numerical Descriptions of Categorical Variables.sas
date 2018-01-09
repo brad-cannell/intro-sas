@@ -1,13 +1,13 @@
-/******************************************************************************
-Module 2: Descriptive Analysis I
+* ============================================================================;
+* Descriptive Analysis I
 
-Numerical Descriptions of Categorical Variables
+* Numerical Descriptions of Categorical Variables
 
-This code is posted for your benefit; however, I highly recommend that you 
-practice typing your own SAS programs as well. With the SAS programming 
-language, as with all new languages, immersion seems to be the best way to 
-learn.
-******************************************************************************/
+* This code is posted for your benefit; however, I highly recommend that you
+* practice typing your own SAS programs as well. With the SAS programming
+* language, as with all new languages, immersion seems to be the best way to
+* learn.
+* ============================================================================;
 
 data height_and_weight;
 	input id $ sex $ ht_in wgt_lbs;
@@ -20,6 +20,7 @@ run;
 
 * First procedure: PROC Print;
 * Generates list report of height_and_weight data set;
+* ============================================================================;
 proc print data = height_and_weight;
 run;
 
@@ -31,11 +32,12 @@ quit;
 
 
 * List report of id and height from height_and_weight data set;
+* ============================================================================;
 proc print data = height_and_weight noobs;
 	var id ht_in;
 run;
 
-* Optional SQL query that returnns id and height from height_and_weight data 
+* Optional SQL query that returnns id and height from height_and_weight data
 * set;
 proc sql;
 	SELECT id, ht_in
@@ -46,6 +48,7 @@ quit;
 
 
 * Numerical description of categorical variables using PROC FREQ.;
+* ============================================================================;
 data height_and_weight_20;
 	input id $ sex $ ht_in wgt_lbs;
 	datalines;
@@ -82,10 +85,8 @@ proc freq data = height_and_weight_20;
 run;
 
 
-* Numerical description of categorical data using PROC FREQ with the MISSING 
+* Numerical description of categorical data using PROC FREQ with the MISSING
 * option;
 proc freq data = height_and_weight_20;
 	table sex / missing;
 run;
-
-

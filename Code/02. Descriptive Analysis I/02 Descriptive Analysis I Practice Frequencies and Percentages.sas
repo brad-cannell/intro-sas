@@ -1,13 +1,13 @@
-/*************************************************************************************************
-Module 2: Descriptive Analysis I
+* ============================================================================;
+* Descriptive Analysis I
 
-Practice: Calculate Frequencies and Percentages
+* Practice: Calculate Frequencies and Percentages
 
-This code is posted for your benefit; however, I highly recommend that you practice typing your
-own SAS programs as well. With the SAS programming language, as with all new languages, immersion 
-seems to be the best way to learn.
-
-*************************************************************************************************/
+* This code is posted for your benefit; however, I highly recommend that you
+* practice typing your own SAS programs as well. With the SAS programming
+* language, as with all new languages, immersion seems to be the best way to
+* learn.
+* ============================================================================;
 
 /*
 Step 1. Highlight and sumbmit the data step below.
@@ -46,7 +46,7 @@ run;
 
 
 /*
-Step 3. Create a frequency report to calculate the percentage of participants who 
+Step 3. Create a frequency report to calculate the percentage of participants who
 self-report having a disability.
 */
 proc freq data = function_study;
@@ -57,9 +57,3 @@ run;
 22.22% of participants self-reported living with a disability.
 2 participants are missing a value for self-reported disability.
 */
-
-
-
-
-
-

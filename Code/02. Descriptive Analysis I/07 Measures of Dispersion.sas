@@ -1,19 +1,20 @@
-/*************************************************************************************************
-Module 2: Descriptive Analysis I
+* ============================================================================;
+* Descriptive Analysis I
 
-Numerical Descriptions of Numerical Variables
+* Numerical Descriptions of Numerical Variables
 
-This code is posted for your benefit; however, I highly recommend that you practice typing your
-own SAS programs as well. With the SAS programming language, as with all new languages, immersion 
-seems to be the best way to learn.
+* This code is posted for your benefit; however, I highly recommend that you
+* practice typing your own SAS programs as well. With the SAS programming
+* language, as with all new languages, immersion seems to be the best way to
+* learn.
+* ============================================================================;
 
-*************************************************************************************************/
 
-/*
-Demonstrating change in variance.
-*/
+Demonstrating change in variance;
+* ============================================================================;
 data example;
-	input @1 allsame 2. @4 half6181 2. @7 even6181 2. @10 half5191 2. @13 even5191 2.;
+	input @1 allsame 2. @4 half6181 2. @7 even6181 2. @10 half5191 2. @13
+	      even5191 2.;
 	datalines;
 71 61 61 51 51
 71 61 62 51 52
@@ -60,15 +61,3 @@ run;
 
 proc means data=example n mean var std min max maxdec=2;
 run;
-
-
-
-
-
-
-
-
-
-
-
-

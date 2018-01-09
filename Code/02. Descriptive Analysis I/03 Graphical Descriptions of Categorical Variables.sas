@@ -1,13 +1,13 @@
-/******************************************************************************
-Module 2: Descriptive Analysis I
+* ============================================================================;
+* Descriptive Analysis I
 
-Graphical Descriptions of Categorical Variables
+* Graphical Descriptions of Categorical Variables
 
-This code is posted for your benefit; however, I highly recommend that you 
-practice typing your own SAS programs as well. With the SAS programming 
-language, as with all new languages, immersion seems to be the best way to 
-learn.
-******************************************************************************/
+* This code is posted for your benefit; however, I highly recommend that you
+* practice typing your own SAS programs as well. With the SAS programming
+* language, as with all new languages, immersion seems to be the best way to
+* learn.
+* ============================================================================;
 
 data bmi;
 	input id $ sex $ bmi & $23.;
@@ -35,12 +35,14 @@ data bmi;
 run;
 
 * Create a frequency report for bmi in this sample;
+* ============================================================================;
 proc freq data = bmi;
 	table bmi;
 run;
 
 
 * Vertical bar charts for categorical variables;
+* ============================================================================;
 proc sgplot data = bmi;
 	vbar bmi;
 run;
@@ -55,6 +57,7 @@ run;
 
 
 * Horizontal bar charts for categorical variables;
+* ============================================================================;
 proc sgplot data = bmi;
 	hbar bmi;
 run;
@@ -62,28 +65,3 @@ run;
 proc gchart data = bmi;
 	hbar bmi;
 run;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

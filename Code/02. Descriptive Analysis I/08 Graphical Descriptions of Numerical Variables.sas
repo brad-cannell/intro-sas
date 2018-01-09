@@ -1,14 +1,17 @@
-/*************************************************************************************************
-Module 2: Descriptive Analysis I
+* ============================================================================;
+* Descriptive Analysis I
 
-Graphical Descriptions of Numerical Variables
+* Graphical Descriptions of Numerical Variables
 
-This code is posted for your benefit; however, I highly recommend that you practice typing your
-own SAS programs as well. With the SAS programming language, as with all new languages, immersion 
-seems to be the best way to learn.
+* This code is posted for your benefit; however, I highly recommend that you
+* practice typing your own SAS programs as well. With the SAS programming
+* language, as with all new languages, immersion seems to be the best way to
+* learn.
+* ============================================================================;
 
-*************************************************************************************************/
 
+Read-in data;
+* ============================================================================;
 data heights;
 	input id uniform actual tails middle lskew rskew;
 	datalines;
@@ -65,54 +68,37 @@ data heights;
 run;
 
 
-/*
-Histogram of actual heights using PROC SGPLOT
-*/
+* Histogram of actual heights using PROC SGPLOT
+* ============================================================================;
 proc sgplot data = heights;
 	histogram actual;
 run;
 
 
-/*
-Histogram of actual heights overlayed with a normal curve
-*/
+* Histogram of actual heights overlaid with a normal curve
+* ============================================================================;
 proc sgplot data = heights;
 	histogram actual;
 	density actual;
 run;
 
 
-/*
-Boxplot of the variable middle with defaults
-*/
+* Boxplot of the variable middle with defaults
+* ============================================================================;
 proc sgplot data = heights;
 	vbox middle;
 run;
 
 
-/*
-Boxplot of the variable middle with the DATALABEL option
-*/
+* Boxplot of the variable middle with the DATALABEL option
+* ============================================================================;
 proc sgplot data = heights;
 	vbox middle /  datalabel = id;
 run;
 
 
-/*
-Using PROC UNIVARIATE to get summary statistics and plots
-*/
+* Using PROC UNIVARIATE to get summary statistics and plots
+* ============================================================================;
 proc univariate data = heights plot;
 	var actual;
 run;
-
-
-
-
-
-
-
-
-
-
-
-

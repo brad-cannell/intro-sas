@@ -1,14 +1,14 @@
-/******************************************************************************
+* ============================================================================;
 Module 1: Demonstrating some of SAS's capabilities
 
-This program creates several different SAS reports. The purpose is just to 
+This program creates several different SAS reports. The purpose is just to
 give you an idea of the kinds of reports you will learn to create using SAS.
 
-This code is posted for your benefit; however, I highly recommend that you 
-practice typing your own SAS programs as well. With the SAS programming 
-language, as with all new languages, immersion seems to be the best way to 
+This code is posted for your benefit; however, I highly recommend that you
+practice typing your own SAS programs as well. With the SAS programming
+language, as with all new languages, immersion seems to be the best way to
 learn.
-******************************************************************************/
+* ============================================================================;
 
 * Read in some instream data lines;
 data example;
@@ -50,12 +50,14 @@ data example;
 run;
 
 * The CONTENTS procedure (contents report);
+* ============================================================================;
 proc contents data = example;
 	title "Viewing the descriptive portion of the Example data set";
 	footnote;
 run;
 
 * The PRINT procedure (list report);
+* ============================================================================;
 proc sort data = example;
 	by sex;
 run;
@@ -70,6 +72,7 @@ run;
 
 
 * The FREQ procedure (frequency report);
+* ============================================================================;
 proc freq data = example;
 	title "Frequency of Disability";
 	title2 "By Participant Sex";
@@ -77,15 +80,17 @@ proc freq data = example;
 run;
 
 * The TTEST procedure (ttest report);
+* ============================================================================;
 proc ttest data = example;
 	title "Testing for Difference in Height";
 	title2 "By Participant Sex";
 	class sex;
 	var ht_in;
-	label ht_in = "Height in Inches"; 
+	label ht_in = "Height in Inches";
 run;
 
 * The GCHART procedure (SAS graphs);
+* ============================================================================;
 proc gchart data = example;
 	title "Frequency of Disability";
 	title2 "By Participant Sex";
