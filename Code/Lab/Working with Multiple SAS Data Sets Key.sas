@@ -11,6 +11,7 @@
 * Download Cities SES.xlsx from Github and import all three sheets (Houston, 
 * Atlanta, and Charlotte) into SAS as separate SAS data sets. Name the SAS 
 * data sets Houston, Atlanta, and Charlotte.;
+* ============================================================================;
 proc import out = houston
 	datafile = "C:\Users\mbc0022\Desktop\City SES.xlsx"
 	dbms = xlsx replace;
@@ -40,7 +41,7 @@ run;
 
 * Create a variable in the Cities data set called site. The values of site 
 * should be equal to the city that data came from. For example, the value of 
-* site for all observations from the Houston data set should be ìHouston.î
+* site for all observations from the Houston data set should be ‚ÄúHouston.‚Äù
 
 * First approach - concatenate;
 * ============================================================================;

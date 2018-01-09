@@ -1,13 +1,11 @@
 * ============================================================================;
-* Lab Assignemnt
-* Descriptive Analysis I
+* Lab: Descriptive Analysis I
 
 	* Create a list report
 	* Create a frequency report
 	* Calculate measures of central tendency
 	* Calculate measures of dispersion
 	* Graphically describe data
-
 * ============================================================================;
 
 * Example 1. Descriptive Analysis Of 2010 Census Data
@@ -16,6 +14,7 @@
 * Please read the data into SAS using a DATALINES statement in a DATA step, 
 * and create a temporary 
 * SAS data set called census;
+* ============================================================================;
 data census;
 	input state $ region $ pop pop65 medage;
 	datalines;
@@ -77,6 +76,7 @@ run;
 
 * Task 1. Create a list report containing all the variables in the data set 
 * census;
+* ============================================================================;
 proc print data = census;
 run;
 
@@ -86,6 +86,7 @@ run;
 * Task 2. Create another list report using the census data set. This time omit 
 * the obs column and only display the state abbreviation and total population 
 * variables;
+* ============================================================================;
 proc print data = census noobs;
 	var state pop;
 run;
@@ -95,6 +96,7 @@ run;
 
 * Task 3. Create a frequency report for the variable region in the census data 
 * set;
+* ============================================================================;
 proc freq data = census;
 	tables region;
 run;
@@ -103,6 +105,7 @@ run;
 
 
 * Task 4. Create a bar graph depicting the number of states in each region;
+* ============================================================================;
 proc gchart data = census;
 	hbar region;
 run;
@@ -115,6 +118,7 @@ run;
 * highly active antiretroviral therapy (HAART) for at least 6 months. The CD4 
 * T cell counts at baseline for the 13 participants are listed below 
 * (Daniel, 2005);
+* ============================================================================;
 data porcellini;
 	input cd4;
 	datalines;
@@ -138,6 +142,7 @@ run;
 
 
 * Task 2. Request the MEAN, MEDIAN, MODE, Standard Deviation, MIN, and MAX;
+* ============================================================================;
 proc means data=porcellini mean median mode std min max;
 	var cd4;
 run;
@@ -147,11 +152,12 @@ run;
 
 * Example 3. Using The MEANS Procedure And SGPLOT Procedure
 * Thilothammal et al. designed a study to determine the efficacy of BCG 
-* (bacillus Calmette-Guérin) vaccine in preventing tuberculosis meningitis. 
+* (bacillus Calmette-GuÃ©rin) vaccine in preventing tuberculosis meningitis. 
 * Among the data collected on each subject was a measure of nutritional status 
 * (actual weight expressed as a percentage of expected weight for actual 
 * height). The nutritional status values of the 107 cases studied are listed 
 * below (Daniel,2005);
+* ============================================================================;
 data thilothmmal;
 	input status @@;
 	datalines;
@@ -168,6 +174,7 @@ run;
 
 
 * Task 2. Request the MEAN, MEDIAN, MODE, Standard Deviation, MIN, and MAX;
+* ============================================================================;
 proc means data=thilothmmal mean median mode std min max;
 	var status;
 run;
@@ -176,6 +183,7 @@ run;
 
 
 * Task 3. Create a histogram of these values;
+* ============================================================================;
 proc sgplot data=thilothmmal;
 	histogram status;
 	density status;
@@ -196,6 +204,7 @@ run;
 * student took BIOS5300 and 0 if the student did not take BIOS5300), epid5300 
 * (coded as 1 if the student took EPID5300 and 0 if the student did not take 
 * EPID5300), and gpa;
+* ============================================================================;
 data classsurv;
 	input id height weight male bach5300 bios5300 epid5300 gpa;
 	datalines;
@@ -227,6 +236,7 @@ run;
 
 * Task 2. Request the MEAN, MEDIAN, MODE, Standard Deviation, MIN, and MAX for 
 * all variables in the data set;
+* ============================================================================;
 proc means data = classsurv n mean median mode std min max;
 run;
 
@@ -235,6 +245,7 @@ run;
 
 * Task 3. Create a boxplot of the variable height. Make sure to label any 
 * outliers with the variable id;
+* ============================================================================;
 proc sgplot data = classsurv;
 	vbox height / datalabel = id;
 run;
