@@ -62,6 +62,8 @@ Here are links to some of the data sets used in the code above.
 
 * [Hospital Survey Data](https://www.dropbox.com/s/jfxisy5nrpi1qu9/Hospital%20Survey.xlsx?dl=0)
 
+* [hsb1](https://www.dropbox.com/s/g49f2v9bus4edgv/hsb1.sas7bdat?dl=0)
+
 * [NC Birth 30](https://www.dropbox.com/s/zanagy1iqtk3lvf/ncbirth30.sas7bdat?dl=0)
 
 * [NHANES](https://wwwn.cdc.gov/nchs/nhanes/)
