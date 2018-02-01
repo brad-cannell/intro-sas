@@ -60,6 +60,10 @@ Here are links to some of the data sets used in the code above.
 
 * [Donation](https://www.dropbox.com/s/gidjffici7dnezb/donation.dat?dl=0) - Used in _Importing Data into SAS_ Practice
 
+* [Excel](https://www.dropbox.com/s/k7t5lwt3xzr0j2t/excel.xls?dl=0)
+
+* Excel 2](https://www.dropbox.com/s/kwu07uah5dxl687/excel%202.xls?dl=0)
+
 * [Fall20, Fall30, and Fall3B](https://www.dropbox.com/sh/6pw6wbaa8xmaa6l/AAADF6jlDad6OPO2AUux7KhMa?dl=0)
 
 * [Hospital Survey Data](https://www.dropbox.com/s/jfxisy5nrpi1qu9/Hospital%20Survey.xlsx?dl=0)
