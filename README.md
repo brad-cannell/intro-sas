@@ -68,6 +68,8 @@ Here are links to some of the data sets used in the code above.
 
 * [NC Birth 30](https://www.dropbox.com/s/zanagy1iqtk3lvf/ncbirth30.sas7bdat?dl=0)
 
+* [Newemps](https://www.dropbox.com/s/ot9i7bpwbz19ozd/newemps.csv?dl=0)
+
 * [NHANES](https://wwwn.cdc.gov/nchs/nhanes/)
 
 * [Speed](https://www.dropbox.com/s/lvic1thw8tci008/Speed.xls?dl=0)
