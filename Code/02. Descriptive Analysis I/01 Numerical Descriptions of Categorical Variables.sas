@@ -16,6 +16,7 @@ data height_and_weight;
 	002 Male 69 176
 	003 Female 64 130
 	004 Female 65 154
+;
 run;
 
 * First procedure: PROC Print;
